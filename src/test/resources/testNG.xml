@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Test Suite Jayjay" parallel="Classes">
+    <test name="Test NGProyekA-B">
+        <classes>
+            <!-- List your test classes here -->
+            <class name="NGProyekA" />
+            <class name="NGProyekB" />
+        </classes>
+    </test>
+</suite>
