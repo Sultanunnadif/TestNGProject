@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Test Suite Jayjay" parallel="Classes">
-    <test name="Test NGProyekA-B">
+<suite name="Reqres Automation API" parallel="Classes">
+    <test name="Test Automation">
         <classes>
             <!-- List your test classes here -->
+            <class name="apiauto.testReqres"/>
             <class name="NGProyekA" />
             <class name="NGProyekB" />
         </classes>
