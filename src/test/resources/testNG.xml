@@ -4,9 +4,9 @@
     <test name="Test Automation">
         <classes>
             <!-- List your test classes here -->
-            <class name="apiauto.testReqres"/>
-            <class name="NGProyekA" />
-            <class name="NGProyekB" />
+            <class name="apiauto.unitPutNG" />
+            <class name="apiauto.inputTesting" />
+            <class name="apiauto.scannerTesting" />
         </classes>
     </test>
 </suite>

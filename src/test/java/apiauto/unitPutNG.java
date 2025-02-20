@@ -1,13 +1,16 @@
+package apiauto;
+
 import io.restassured.RestAssured;
-import io.restassured.mapper.ObjectMapperType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.util.regex.Matcher;
+
+import java.io.File;
+
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class unitPutNG {
     @BeforeMethod
@@ -15,8 +18,18 @@ public class unitPutNG {
         RestAssured.baseURI = "https://reqres.in/api/users/2";
     }
 
+    public void getputList(){
+        File jsonputScheme = new File("src/test/resources/jsonSchema/getPutlist.json");
+            RestAssured
+                    .given().when()
+                    .get("https://reqres.in/api/users/2")
+                    .then().log().all()
+                    .assertThat().statusCode(200)
+                    .assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonputScheme));
+    }
+
     @Test
-    public void putTest() {
+    public void putTest(){
         int id = 2;
         Response outdateData = given().when().get("https://reqres.in/api/users/2");
         String FName = outdateData.jsonPath().getString("data.first_name");
@@ -47,6 +60,5 @@ public class unitPutNG {
                 .then().log().all()
                 .assertThat().statusCode(200)
                 .assertThat().body("first_name", Matchers.equalTo(newFirstName));
-
     }
 }
