@@ -3,7 +3,6 @@
 <suite name="Reqres Automation API" parallel="Classes">
     <test name="Test Automation">
         <classes>
-            <!-- List your test classes here -->
             <class name="apiauto.unitPutNG" />
             <class name="apiauto.inputTesting" />
             <class name="apiauto.scannerTesting" />
