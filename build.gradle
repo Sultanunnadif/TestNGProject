@@ -13,10 +13,13 @@ repositories {
 dependencies {
     testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.0")
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.16.1'
     implementation group: 'org.json', name: 'json', version: '20240303'
     implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.5.0'
     implementation 'io.cucumber:cucumber-testng:7.21.1'
     implementation 'io.cucumber:cucumber-java:7.21.1'
+    implementation 'ru.yandex.qatools.ashot:ashot:1.5.4'
 }
 
 test {
